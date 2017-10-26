@@ -1,7 +1,12 @@
 <h1>
     List of books..
 
-    <div *ngFor="let book of books">
+   <!-- <div *ngFor="let book of books">
         <h3>{{book.title}}</h3>
-    </div>    
+    </div>-->
 </h1>    
+<div>
+      <ag-grid-angular #agGrid style="width:500px; height:200px;" (gridReady)="onReady($event)"
+       class="ag-fresh" [gridOptions]="gridOptions" [rowData]="books" >
+      </ag-grid-angular>
+</div>
