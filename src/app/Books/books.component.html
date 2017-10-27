@@ -6,7 +6,7 @@
     </div>-->
 </h1>    
 <div>
-      <ag-grid-angular #agGrid style="width:500px; height:200px;" (gridReady)="onReady($event)"
-       class="ag-fresh" [gridOptions]="gridOptions" [rowData]="books" >
+      <ag-grid-angular #agGrid style="width:500px; height:300px;" enableSort=true enableFilter=true (gridReady)="onReady($event)"
+       class="ag-dark" [gridOptions]="gridOptions" [rowData]="books" >
       </ag-grid-angular>
 </div>

@@ -6,11 +6,13 @@ import {AgGridModule} from 'ag-grid-angular';
 import { AppComponent } from './app.component';
 import { BookService } from "app/shared/bookservice";
 import { BooksComponent } from "app/Books/books.component";
+import { BookComponent } from "app/Book/book.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksComponent
+    BooksComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
