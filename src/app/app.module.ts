@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import {AgGridModule} from 'ag-grid-angular';
+import {routing,appRoutingProviders} from './app.routing';
 
 import { AppComponent } from './app.component';
 import { BookService } from "app/shared/bookservice";
@@ -17,9 +18,10 @@ import { BookComponent } from "app/Book/book.component";
   imports: [
     BrowserModule,
     HttpModule,
-    AgGridModule.withComponents([BooksComponent])
+    routing,
+    AgGridModule.withComponents([BooksComponent]),
   ],
-  providers: [BookService],
+  providers: [BookService,appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

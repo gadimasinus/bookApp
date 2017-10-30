@@ -6,7 +6,6 @@ import { GridOptions } from 'ag-grid';
 //import('ag-grid/dist/styles/ag-grid.css');
 
 @Component({
-    selector: "app-book",
     templateUrl: "books.component.html",
     styleUrls: ["books.component.css"]
 })
@@ -15,6 +14,8 @@ export class BooksComponent implements OnInit {
     books: IBook[];
     gridOptions: GridOptions;
     constructor(private bookService: BookService) {
+        console.log('in books component');
+        
         this.gridOptions = <GridOptions>{ enableSorting: true };
 
         this.gridOptions.columnDefs = [
